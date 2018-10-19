@@ -1,0 +1,58 @@
+ion-grid.logo{
+  margin-top: 70px;
+ion-row.logo{
+  ion-col img{
+    width: 90px;
+    height: 70px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+ion-row{
+  h4{
+    margin: 0;
+  }
+  ion-col{
+    padding: 0;
+  }
+}
+}
+
+ion-grid.password{
+  position: relative;
+  margin-top: 50px;
+  ion-input{
+    padding: 10px;
+    border-bottom:2px solid #ccc;
+    &.has-focus{
+      border-bottom: 2px solid #1254aa;
+    }
+  }
+  ion-row.show-password{
+    position: absolute;
+    right: 25px;
+    top: 15px;
+  }
+  ion-icon{
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+ion-grid.touch{
+  margin-top: 30px;
+  ion-icon{
+    font-size: 26px;
+  }
+}
+
+
+ion-grid.register{
+  position: absolute;
+  bottom: 20px;
+  padding: 0;
+  width: 90%;
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+}

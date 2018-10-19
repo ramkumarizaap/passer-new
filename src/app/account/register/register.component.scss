@@ -1,0 +1,50 @@
+ion-grid.logo{
+  margin-top: 20px;
+ion-row.logo{
+  ion-col img{
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+ion-row{
+  h4{
+    margin: 0;
+  }
+  ion-col{
+    padding: 0;
+  }
+}
+}
+.item-native{
+  padding: 0 !important;
+}
+ion-grid.register-form{
+  padding: 10px 20px 10px 20px;
+  margin-top: 20px;
+  ion-input{
+    padding: 10px;
+    border-bottom:2px solid #ccc;
+    &.has-focus{
+      border-bottom: 2px solid #1254aa;
+    }
+  }
+  ion-row{
+    margin-bottom: 10px;
+  }
+  ion-label{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    ion-icon{
+      opacity: 0.5;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: #000;
+  }
+  
+}
