@@ -42,6 +42,19 @@ ion-grid.touch{
   margin-top: 30px;
   ion-icon{
     font-size: 26px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition:    all 0.5s ease-in-out;
+    -o-transition:      all 0.5s ease-in-out;
+    -ms-transition:     all 0.5s ease-in-out;
+  }
+}
+ion-grid.touch.ferror{
+  color:red;
+  ion-icon{
+    -webkit-transform: rotate(360deg) scale(1);
+    -moz-transform:    rotate(360deg) scale(1);
+    -o-transform:      rotate(360deg) scale(1);
+    -ms-transform:     rotate(360deg) scale(1);
   }
 }
 

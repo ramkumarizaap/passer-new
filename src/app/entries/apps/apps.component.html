@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Apps
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1">
+        <ion-icon name="ios-arrow-forward"></ion-icon>
+      </ion-col>
+      <ion-col size="10">
+        Facebook
+      </ion-col>
+      <ion-col size="1">
+        <ion-icon (click)="showAction()" class="more-icon" item-end name="md-more"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-fab vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addApps()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

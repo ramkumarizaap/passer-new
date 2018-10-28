@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppsComponent } from './entries/apps/apps.component';
+import { AddComponent } from './entries/apps/add/add.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'apps',
     pathMatch: 'full'
   },
   {
@@ -22,6 +24,20 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: './account/register/register.module#RegisterModule'
+  },
+  {
+    path:'apps',
+    children:[
+      {
+        path:'',
+        loadChildren:'./entries/apps/apps.module#AppsModule',
+      },
+      {
+        path:'add',
+        component: AddComponent
+        // loadChildren:'./entries/apps/apps.module#AppsModule'
+      }
+    ]
   }
 ];
 

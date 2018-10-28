@@ -12,11 +12,23 @@
   </ion-grid>
   
   <ion-grid class="password">
-    <ion-row>
-      <ion-col col-12>
-        <ion-input name="password" type="{{inputType}}" placeholder="Your Password"></ion-input>
-      </ion-col>
-    </ion-row>
+    <form  novalidate=""  [formGroup]="loginForm" method="POST">
+      <ion-row>
+        <ion-col col-12>
+          <ion-input formControlName="password" name="password" type="{{inputType}}" placeholder="Your Password"></ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12 *ngIf="loginFormSubmitted && loginForm.controls.password.errors?.required">
+          <p class="error">Password Required</p>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <ion-button shape="block" [disabled]="!loginForm.valid" (click)="submitLoginForm()">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
     <ion-row class="show-password">
       <ion-col col-12>
           <ion-icon name="{{passwordIcon}}" (click)="changeInput()"></ion-icon>
