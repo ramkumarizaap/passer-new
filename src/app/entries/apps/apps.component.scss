@@ -5,11 +5,29 @@ ion-fab{
 }
 ion-grid
 {
+  padding: 0;
+  margin-top: 10px;
   ion-row{
     ion-icon{
       &.more-icon{
-        font-size: 24px;
+        font-size: 28px;
+        position: relative;
+        right: 10px;
+        color: var(--ion-color-primary);
       } 
     }
+    &.detail-list
+    {
+      width: 100%;
+      background: #a5a5a5;
+    }
   }
+
+}
+.item-inner{
+  border-bottom:1px solid red !important;
+}
+.toolbar-background,ion-toolbar .toolbar-background
+{
+  background: red !important;
 }

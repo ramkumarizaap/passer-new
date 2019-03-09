@@ -8,7 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { AddComponent } from './add/add.component';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -19,6 +18,8 @@ import { AddComponent } from './add/add.component';
       path:'',
       component: AppsComponent
     }])
+  ],
+  providers:[
   ],
   declarations: [AppsComponent, AddComponent]
 })

@@ -1,6 +1,9 @@
 // http://ionicframework.com/docs/theming/
+
+
+/* 
 @import "~@ionic/angular/css/core.css";
-@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/normalize.css"/;
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
 
@@ -8,11 +11,31 @@
 @import "~@ionic/angular/css/float-elements.css";
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/flex-utils.css"; */
 
 
-
+@font-face {
+  font-family: Passer;
+  src: url('theme/Aladin.ttf');
+}
+*{
+  font-family: Passer;
+}
 p.error{
   color: red;
   margin: 0;
+}
+ion-input{
+  padding: 10px;
+  border-bottom: 2px solid var(--ion-color-primary-tint);
+  &.has-focus{
+    border-bottom: 2px solid var(--ion-color-primary-shade);
+  }
+}
+
+.toolbar-background{
+  background: red !important;
+}
+ion-header{
+  padding-top: 0 !important;
 }

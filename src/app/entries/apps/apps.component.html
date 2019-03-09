@@ -9,17 +9,22 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <ion-grid>
-    <ion-row>
+  <ion-grid *ngIf="appList">
+    <ion-row *ngFor="let app of appList">
       <ion-col size="1">
         <ion-icon name="ios-arrow-forward"></ion-icon>
       </ion-col>
       <ion-col size="10">
-        Facebook
+        <ion-title>{{app.appname}}</ion-title>
       </ion-col>
       <ion-col size="1">
-        <ion-icon (click)="showAction()" class="more-icon" item-end name="md-more"></ion-icon>
+        <ion-icon (click)="showAction(app.id,app)" class="more-icon" item-end name="md-more"></ion-icon>
       </ion-col>
+      <ion-row class="detail-list">
+        <ion-col col-12>
+            <ion-item>Hello</ion-item>
+        </ion-col>
+      </ion-row>
     </ion-row>
   </ion-grid>
   <ion-fab vertical="bottom" horizontal="end">

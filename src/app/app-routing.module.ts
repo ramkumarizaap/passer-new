@@ -34,7 +34,18 @@ const routes: Routes = [
       },
       {
         path:'add',
-        component: AddComponent
+        children:[
+          {
+            path:'',
+            component: AddComponent
+          },
+          {
+            path:':id',
+            component: AddComponent
+          },
+
+        ]
+        
         // loadChildren:'./entries/apps/apps.module#AppsModule'
       }
     ]

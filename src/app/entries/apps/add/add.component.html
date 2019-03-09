@@ -26,8 +26,8 @@
           <div [formGroupName]="i">
             <ion-row>
               <ion-col col-12>
-                <ion-input formConrtrolName="username" placeholder="Login Username"></ion-input>
-                <ion-icon *ngIf="len.length > 1"  (click)="_removeItem()" class="ip-icon trash-icon" name="md-trash"></ion-icon>
+                <ion-input formControlName="username" placeholder="Login Username"></ion-input>
+                <ion-icon *ngIf="len.length > 1"  (click)="_removeItem(i,item,$event)" class="ip-icon trash-icon" name="md-trash"></ion-icon>
               </ion-col>
             </ion-row>
             <ion-row>
@@ -54,8 +54,8 @@
       </ion-row>
       <ion-row>
         <ion-col col-6>
-          <ion-button [disabled]="!appAddForm.valid" ><ion-icon name="md-checkmark"></ion-icon>&nbsp;Save</ion-button>
-          <ion-button color="danger"><ion-icon name="md-close"></ion-icon>&nbsp;Cancel</ion-button>
+          <ion-button (click)="saveForm()" [disabled]="!appAddForm.valid" ><ion-icon name="md-checkmark"></ion-icon>&nbsp;Save</ion-button>
+          <ion-button (click)="cancel()" color="danger"><ion-icon name="md-close"></ion-icon>&nbsp;Cancel</ion-button>
         </ion-col>
       </ion-row>
     </form>
